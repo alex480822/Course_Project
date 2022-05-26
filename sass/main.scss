@@ -22,13 +22,13 @@ body {
 }
 
 // nav
-// burger button 
+// burger button
 .burger-btn {
 	position: fixed;
 	top: 20px;
 	right: 20px;
 	padding: 1em;
-	background:none;
+	background: none;
 	border: 1px solid transparent;
 	cursor: pointer;
 	z-index: 1000;
@@ -39,8 +39,9 @@ body {
 		border-radius: 8px;
 	}
 
-	&:hover{
-		.burger-btn__bars::after, .burger-btn__bars::before{
+	&:hover {
+		.burger-btn__bars::after,
+		.burger-btn__bars::before {
 			width: 100%;
 		}
 	}
@@ -54,22 +55,57 @@ body {
 	&__bars::after {
 		@include burgerBtn;
 	}
-	&__bars{
+	&__bars {
 		width: 100%;
-		&::after{
+		&::after {
 			top: 13px;
 			width: 60%;
 		}
-		&::before{
+		&::before {
 			top: 27px;
 			width: 30%;
-			transition-delay: .1s;
+			transition-delay: 0.1s;
+		}
+	}
+}
+.nav {
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	top: 0;
+	height: 100vh;
+	width: 100%;
+	background-image: $light-blue-gradient-solid;
+	z-index: 100;
+
+	&__item {
+		position: relative;
+		display: block;
+		margin: 0.5em 0em;
+		padding: 0.5em 2em;
+		font-size: 2.8rem;
+		color: $pure-white;
+		text-decoration: none;
+		&::before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 3px;
+			height: 100%;
+			transform: scaleY(0);
+			transition: transform .2s;
+			background-color: $pure-white;
+			content: '';
+		}
+		&:hover::before{
+				transform: scaleY(1);
 		}
 	}
 }
 
 // HESADER
-.header{
+.header {
 	position: relative;
 	display: flex;
 	justify-content: center;
@@ -79,16 +115,16 @@ body {
 	height: 75vh;
 	text-align: center;
 	color: $pure-white;
-	@include heroImages ('../img/palm-gc864cee13_640.jpg');
+	@include heroImages("../img/palm-gc864cee13_640.jpg");
 	background-attachment: scroll;
 
-	&__heading{
-		font-family: 'Dancing Script', cursive;
+	&__heading {
+		font-family: "Dancing Script", cursive;
 		font-size: 4.8rem;
 		font-weight: 300;
 	}
 
-	&__text{
+	&__text {
 		font-size: 1.4rem;
 	}
 	&__btn {
@@ -103,12 +139,44 @@ body {
 		cursor: pointer;
 		background-color: $pure-white;
 
-		&::before{
+		&::before {
 			background-color: $light-white;
 		}
 	}
-
-
 }
 
+// ==============================
+// MEDIA
+// ==============================
 
+@media (min-width: 768px) {
+	.white-block {
+		height: 50px;
+		width: 45%;
+	}
+	.header {
+		&__heading {
+			font-size: 6.6rem;
+		}
+		&__text {
+			font-size: 2.2rem;
+		}
+		&__btn {
+			font-size: 1.6rem;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.burger-btn {
+		top: 50px;
+		right: 50px;
+	}
+	.header {
+		background-image: $blue-gradient, url("../img/palm-ge99d38684_1920.jpg");
+
+		&__heading {
+			font-size: 10rem;
+		}
+	}
+}
