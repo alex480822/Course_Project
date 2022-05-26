@@ -78,7 +78,7 @@ body {
 	width: 100%;
 	// Ukrywa nawigację przesuwając ją w prawo
 	transform: translatex(100%);
-	transition: .5s cubic-bezier(0.65, 0.05, 0.46, 1);
+	transition: 0.5s cubic-bezier(0.65, 0.05, 0.46, 1);
 	background-image: $light-blue-gradient-solid;
 	z-index: 100;
 
@@ -109,6 +109,20 @@ body {
 			transform: scaleY(1);
 		}
 	}
+}
+
+// 1
+@keyframes navItemsAnimation {
+	from {
+		transform: translateX(200%);
+	}
+	to {
+		transform: translateX(0);
+	}
+}
+// 2
+.nav-items-animation {
+	animation: navItemsAnimation 1s;
 }
 
 // HESADER
