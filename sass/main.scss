@@ -28,7 +28,7 @@ body {
 	top: 20px;
 	right: 20px;
 	padding: 1em;
-	background: none;
+	background:none;
 	border: 1px solid transparent;
 	cursor: pointer;
 	z-index: 1000;
@@ -40,21 +40,21 @@ body {
 	}
 
 	&:hover{
-		.burger-btn_bars::after, .burger-btn_bars::before{
+		.burger-btn__bars::after, .burger-btn__bars::before{
 			width: 100%;
 		}
 	}
-	&_box {
+	&__box {
 		position: relative;
 		width: 40px;
 		height: 30px;
 	}
-	&_bars,
-	&_bars::before,
-	&_bars::after {
+	&__bars,
+	&__bars::before,
+	&__bars::after {
 		@include burgerBtn;
 	}
-	&_bars{
+	&__bars{
 		width: 100%;
 		&::after{
 			top: 13px;
@@ -67,4 +67,48 @@ body {
 		}
 	}
 }
+
+// HESADER
+.header{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 2em;
+	height: 75vh;
+	text-align: center;
+	color: $pure-white;
+	@include heroImages ('../img/palm-gc864cee13_640.jpg');
+	background-attachment: scroll;
+
+	&__heading{
+		font-family: 'Dancing Script', cursive;
+		font-size: 4.8rem;
+		font-weight: 300;
+	}
+
+	&__text{
+		font-size: 1.4rem;
+	}
+	&__btn {
+		margin-top: 2em;
+		padding: 0.8em 1.6em;
+		font-size: 1.4rem;
+		color: $dark;
+		border: none;
+		border-radius: 8px;
+		text-decoration: none;
+		text-transform: uppercase;
+		cursor: pointer;
+		background-color: $pure-white;
+
+		&::before{
+			background-color: $light-white;
+		}
+	}
+
+
+}
+
 
