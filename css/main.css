@@ -269,10 +269,82 @@ body {
   background-color: #eee;
 }
 
+.section-heading {
+  position: relative;
+  margin-bottom: 2em;
+  font-size: 4rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: center;
+  color: #1755e7;
+  letter-spacing: 3px;
+}
+
+.section-padding {
+  padding: 5em 2em;
+}
+
+.dreams__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 2em 0em;
+}
+
+.dreams__img {
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+.dreams__title {
+  margin-bottom: 0.5em;
+}
+
+.dreams__text {
+  font-size: 1.4rem;
+}
+
+@media (min-width: 576px) {
+  .dreams__box {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .dreams__box-text {
+    width: 55%;
+  }
+  .dreams__box-text--right {
+    text-align: right;
+  }
+  .dreams__box-img {
+    width: 40%;
+  }
+  .dreams__box-img--right {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .dreams__img {
+    margin-bottom: 0;
+    max-height: 300px;
+  }
+}
+
 @media (min-width: 768px) {
   .white-block {
     height: 50px;
     width: 45%;
+  }
+  .nav__item {
+    font-size: 4.8rem;
   }
   .header__heading {
     font-size: 6.6rem;
@@ -282,6 +354,34 @@ body {
   }
   .header__btn {
     font-size: 1.6rem;
+  }
+  .section-heading {
+    font-size: 3.6em;
+  }
+  .section-padding {
+    padding: 8em 2em;
+  }
+  .dreams__box {
+    margin: 5em 0;
+  }
+  .dreams__box-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    margin-bottom: 2.5em;
+  }
+  .dreams__box-title {
+    font-size: 3rem;
+  }
+  .dreams__text {
+    font-size: 2.2rem;
   }
 }
 
@@ -295,6 +395,12 @@ body {
   }
   .header__heading {
     font-size: 10rem;
+  }
+  .section-heading {
+    font-size: 4em;
+  }
+  .section-padding {
+    padding: 10em 2em;
   }
 }
 /*# sourceMappingURL=main.css.map */
