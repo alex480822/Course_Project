@@ -275,13 +275,13 @@ body {
 			font-size: 1.8rem;
 		}
 	}
-	.hero-img{
+	.hero-img {
 		padding: 30rem 2em;
-		hr{
+		hr {
 			margin: 0 auto;
 			width: 70%;
 		}
-		&__text{
+		&__text {
 			font-size: 2.2rem;
 		}
 	}
@@ -325,17 +325,17 @@ body {
 			font-size: 2.2rem;
 		}
 	}
-	.hero-img{
+	.hero-img {
 		padding: 40rem 2em;
-		background-image: $blue-gradient, url('../img/hd-wallpaper-g0945a5bf5_1920.jpg');
+		background-image: $blue-gradient,
+			url("../img/hd-wallpaper-g0945a5bf5_1920.jpg");
 
-		&__title{
+		&__title {
 			font-size: 7.2rem;
 		}
-		hr{
+		hr {
 			width: 60%;
 			max-width: 900px;
 		}
 	}
-	
 }
