@@ -200,6 +200,26 @@ body {
 		font-size: 1.4rem;
 	}
 }
+// ==============================
+//Hero-img
+// ==============================
+.hero-img {
+	position: relative;
+	padding: 10em 2em;
+	@include heroImages("../img/hd-wallpaper-g9e456a6e0_640.jpg");
+	text-align: center;
+	color: $pure-white;
+	overflow: hidden;
+
+	&__title {
+		font-family: "Dancing Script", cursive;
+		margin-bottom: 0.5em;
+		font-size: 4.8rem;
+	}
+	&__text {
+		padding: 1em 0;
+	}
+}
 
 // ==============================
 // MEDIA
@@ -250,26 +270,18 @@ body {
 			font-size: 1.6rem;
 		}
 	}
-	.section-heading {
-		font-size: 3.6em;
-	}
-	.section-padding {
-		padding: 8em 2em;
-	}
 	.dreams {
-		&__box {
-			margin: 5em 0;
-			&-text {
-				display: flex;
-				flex-direction: column;
-				justify-content: flex-end;
-				margin-bottom: 2.5em;
-			}
-			&-title {
-				font-size: 3rem;
-			}
-		}
 		&__text {
+			font-size: 1.8rem;
+		}
+	}
+	.hero-img{
+		padding: 30rem 2em;
+		hr{
+			margin: 0 auto;
+			width: 70%;
+		}
+		&__text{
 			font-size: 2.2rem;
 		}
 	}
@@ -288,9 +300,42 @@ body {
 		}
 	}
 	.section-heading {
-		font-size: 4em;
+		font-size: 3.6em;
 	}
 	.section-padding {
-		padding: 10em 2em;
+		padding: 8em 2em;
 	}
+	.dreams {
+		&__box {
+			margin: 5em 0;
+			&-text {
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-end;
+				margin-bottom: 2.5em;
+			}
+			&-title {
+				font-size: 3.6rem;
+			}
+		}
+		&__img {
+			max-height: 400px;
+		}
+		&__text {
+			font-size: 2.2rem;
+		}
+	}
+	.hero-img{
+		padding: 40rem 2em;
+		background-image: $blue-gradient, url('../img/hd-wallpaper-g0945a5bf5_1920.jpg');
+
+		&__title{
+			font-size: 7.2rem;
+		}
+		hr{
+			width: 60%;
+			max-width: 900px;
+		}
+	}
+	
 }
