@@ -457,6 +457,10 @@ body {
   cursor: pointer;
 }
 
+.islands__card-info-btn::before {
+  background-color: greenyellow;
+}
+
 @media (min-width: 576px) {
   .dreams__box {
     -webkit-box-orient: horizontal;
@@ -517,6 +521,20 @@ body {
   .hero-img__text {
     font-size: 2.2rem;
   }
+  .islands__cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .islands__card {
+    margin: 1em;
+    width: 45%;
+  }
 }
 
 @media (min-width: 992px) {
@@ -571,6 +589,12 @@ body {
   .hero-img hr {
     width: 60%;
     max-width: 900px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .islands__card {
+    width: 30%;
   }
 }
 /*# sourceMappingURL=main.css.map */

@@ -263,12 +263,12 @@ body {
 				bottom: 30px;
 				right: 30px;
 				font-size: 1.8rem;
-				i{
+				i {
 					margin-right: 0.03em;
 				}
 			}
 		}
-		&-info{
+		&-info {
 			position: absolute;
 			top: 0;
 			bottom: 0;
@@ -283,31 +283,27 @@ body {
 			opacity: 0;
 			transform: rotateY(180deg);
 			transition: transform 1s, opacity 1s;
-			&-title{
-				position: absolute;
-				left: 50%;
-				transform: translateX(-50%);
+			&-title {
+				@include islandCardStyles;
 				top: 1.2em;
 				font-family: "Dancing Script", cursive;
 				font-size: 2.8rem;
 			}
-			&-list{
+			&-list {
 				margin: 0 auto;
 				width: 70%;
 				list-style: none;
-				&-item{
+				&-item {
 					padding: 1em;
 					font-size: 1.4rem;
 					border-bottom: 1px solid $light-white;
-					&:last-child{
+					&:last-child {
 						border-bottom: none;
 					}
 				}
 			}
-			&-btn{
-				position: absolute;
-				left: 50%;
-				transform: translateX(-50%);
+			&-btn {
+				@include islandCardStyles;
 				bottom: 2em;
 				padding: 1em;
 				border-radius: 8px;
@@ -315,7 +311,9 @@ body {
 				border: none;
 				background-color: lightgreen;
 				cursor: pointer;
-
+				&::before {
+					background-color: greenyellow;
+				}
 			}
 		}
 	}
@@ -385,6 +383,17 @@ body {
 			font-size: 2.2rem;
 		}
 	}
+	.islands{
+		&__cards{
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+		&__card{
+			margin: 1em;
+			width: 45%;
+		}
+	}
 }
 
 @media (min-width: 992px) {
@@ -436,6 +445,14 @@ body {
 		hr {
 			width: 60%;
 			max-width: 900px;
+		}
+	}
+}
+
+@media (min-width: 1100px) {
+	.islands{
+		&__card{
+			width: 30%;
 		}
 	}
 }
