@@ -125,7 +125,7 @@ body {
 	animation: navItemsAnimation 1s;
 }
 
-// HESADER
+// Header
 .header {
 	position: relative;
 	display: flex;
@@ -370,6 +370,52 @@ body {
 		}
 	}
 }
+// ==============================
+// Reviews
+// ==============================
+
+@media(max-width:767px){
+	.reviews.section-padding{
+		padding: 6em 0;
+	}
+}
+.reviews {
+	width: 100% !important;
+	&__box {
+		position: relative;
+		margin: 2em;
+		padding: 2em;
+		border-radius: 8px;
+		box-shadow: 3px 3px 10px #2e2e2e2e;
+		transition: transform .3s;
+		&:hover{
+			transform: translate(.95);
+		}
+	}
+	&__box-img {
+		position: absolute;
+		top: 8%;
+		left: 75%;
+		transform: translate(-50%, -50%);
+		img {
+			width: 80px;
+			height: 80px;
+			object-fit: cover;
+			border-radius: 50%;
+		}
+	}
+	&__box-quote {
+		font-size: 3rem;
+		margin-bottom: 1em;
+		color: $main-color;
+	}
+
+	&__box-text {
+		margin-bottom: 1em;
+		font-size: 1.4rem;
+		color: $dark;
+	}
+}
 
 // ==============================
 // MEDIA
@@ -530,15 +576,14 @@ body {
 		background-image: $blue-gradient, url("../img/hero2_big.jpg");
 
 		&__option {
-			&-img{
+			&-img {
 				object-fit: cover;
 				height: 300px;
 			}
-			&-text{
+			&-text {
 				font-size: 1.5rem;
 			}
 		}
-		
 	}
 }
 

@@ -1,7 +1,7 @@
 // Aby treść na stronie zawsze była na środku dla monitorów ultrawide
 .wapper {
 	margin: 0 auto ;
-	width: 100%;
+	width: 100% !important;
 	max-width: 1200px;
 }
 
